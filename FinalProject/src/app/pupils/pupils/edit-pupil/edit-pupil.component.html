@@ -1,0 +1,17 @@
+<h1>Edit Page:</h1>
+<div *ngIf="pupils | async as pupil">
+    <div class="couple">Full Name: <input class="form-control" type="text" [(ngModel)]="pupil.fullName" />
+        <h4>{{ pupil.fullName }}</h4>
+    </div>
+    <div class="couple">ID: <input class="form-control" type="text" [(ngModel)]="pupil.id" />
+        <h4>{{ pupil.id }}</h4>
+    </div>
+    <div class="couple">City: <input class="form-control" type="text" [(ngModel)]="pupil.city" />
+        <h4>{{ pupil.city }}</h4>
+    </div>
+    <div class="couple">Professions and grades: <input class="form-control" type="text" [(ngModel)]="pupil.professions" />
+        <h4>{{ pupil.professions }}</h4>
+    </div>
+</div>
+
+<a class="btn btn-primary" [routerLink]="['/pupils']">Back</a>

@@ -1,0 +1,31 @@
+<table class="table">
+    <thead class="fw-bold bg-dark" style="color: rgb(226, 225, 213); font-size: 35px;">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">City</th>
+            <th scope="col">Job title</th>
+            <th scope="col">Hours a month</th>
+            <th scope="col">Hourly wage</th>
+            <th scope="col">Total salery</th>
+            <th scope="col">Image</th>
+        </tr>
+    </thead>
+    <tbody class="font-italic" style="font-size: 35px;">
+        <tr *ngFor="let employee of employeesArr" [ngClass]="{
+            red:employee.checkSalary()<3000,
+            blue:employee.checkSalary()>3000
+          }">
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.fullName }}</td>
+            <td>{{ employee.age }}</td>
+            <td>{{ employee.city }}</td>
+            <td>{{ employee.jobTitle }}</td>
+            <td>{{ employee.workHoursMounth }}</td>
+            <td>{{ employee.hourlyWage }}</td>
+            <td>{{ employee.hourlyWage*employee.workHoursMounth }}₪</td>
+            <td><img src="{{ employee.image }}" width="200" height="200" style="border-radius: 8px;"></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+.Fails{
+    background-color: rgb(243, 109, 109);
+}
+.Moved{
+    background-color: rgb(76, 76, 245);
+}
+
+.couple{
+    display: flex;
+    flex-direction: row;
+}
+input{
+    width: 20%;
+}

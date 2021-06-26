@@ -1,0 +1,26 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  #content img {
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 15px;
+    left: 40px;
+  }
+
+  #sizeIcons {
+    font-size: 30px;
+    color: black;
+  }

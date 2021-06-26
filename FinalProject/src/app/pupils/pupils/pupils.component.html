@@ -1,0 +1,29 @@
+<table class="table">
+    <thead class="fw-bold bg-dark" style="color: rgb(226, 225, 213); font-size: 35px;">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">City</th>
+            <th scope="col">Class</th>
+            <th scope="col">Grades</th>
+            <th scope="col">Picture</th>
+            <th scope="col">Edit</th>
+        </tr>
+    </thead>
+    <tbody class="font-italic" style="font-size: 30px;">
+        <tr [ngClass]="{
+            'Fails': pupil.avergePupils() < 65,
+            'Moved': pupil.avergePupils() >= 65
+            }" *ngFor="let pupil of pupilsArr">
+            <td>{{ pupil.id }}</td>
+            <td>{{ pupil.fullName }}</td>
+            <td>{{ pupil.age }}</td>
+            <td>{{ pupil.city }}</td>
+            <td>{{ pupil.Class }}</td>            
+            <ul *ngFor="let prof of pupil.professions"><li>{{ prof }}</li></ul>
+            <td><img src="{{ pupil.image }}" width="200" height="200" style="border-radius: 8px;"></td>
+            <a class="btn btn-primary" [routerLink]="['/pupils', pupil.id]" style="background: darkblue;">Edit</a>
+        </tr>
+    </tbody>
+</table>

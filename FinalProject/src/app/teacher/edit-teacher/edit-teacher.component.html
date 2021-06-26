@@ -1,0 +1,23 @@
+<h1>Edit page:</h1>
+<div *ngIf="teacher | async as teacher">
+    <div class="couple">Name: <input class="form-control" type="text" [(ngModel)]="teacher.fullName" />
+        <h4>{{ teacher.fullName }}</h4>
+    </div>
+    <div class="couple">City: <input class="form-control" type="text" [(ngModel)]="teacher.city" />
+        <h4>{{ teacher.city }}</h4>
+    </div>
+    <div class="couple">Courses: <input class="form-control" type="text" [(ngModel)]="teacher.subjects" />
+        <h4>{{ teacher.subjects }}</h4>
+    </div>
+    <div class="couple">Seniority: <input class="form-control" type="text" [(ngModel)]="teacher.seniority" />
+        <h4>{{ teacher.seniority }}</h4>
+    </div>
+    <div class="couple">Hourly wage: <input class="form-control" type="text" [(ngModel)]="teacher.saleryHour" />
+        <h4>{{ teacher.saleryHour }}</h4>
+    </div>
+    <div class="couple">Working hours per month: <input class="form-control" type="text" [(ngModel)]="teacher.monthlyHours" />
+        <h4>{{ teacher.monthlyHours }}</h4>
+    </div>
+</div>
+
+<a class="btn btn-primary" [routerLink]="['/teachers']">Back</a>
