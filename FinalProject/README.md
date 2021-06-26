@@ -1,4 +1,4 @@
-# FinalProject-Shahar Nahum
+# Angular Course Project Completion
 
 ## Home page:
 
